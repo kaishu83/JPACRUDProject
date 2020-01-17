@@ -1,6 +1,6 @@
 package com.skilldistillery.lakes.entities;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -41,8 +41,9 @@ class LakeTest {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
+	void test_Laker_Entity_Mapping() {
+assertNotNull(lake);
+
+}
 
 }
