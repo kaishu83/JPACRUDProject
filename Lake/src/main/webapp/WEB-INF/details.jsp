@@ -19,6 +19,7 @@
 		<li>Allow Ice fishing? <c:choose>
 				<c:when test="${lake.canIceFishing==true }"> YES</c:when>
 				<c:when test="${lake.canIceFishing==false }"> NO</c:when>
+			
 			</c:choose>
 		</li>
 		<li>Fish Species: ${lake.fishSpecies }</li>
@@ -30,12 +31,12 @@
 	<br>
 
 
-	<form action="update.do" method="get">
+	<form action="update.do" method="GET">
 		<input type="hidden" value="${lake.id}" name="id" /> <input type="submit"
 			value="Update">
 	</form>
 	
-	<form action="delete.do" method="get">
+	<form action="delete.do" method="POST">
 		<input type="hidden" value="${lake.id}" name="id" /> <input type="submit"
 			value="Delete">
 	</form>

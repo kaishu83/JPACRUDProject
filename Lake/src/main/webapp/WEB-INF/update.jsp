@@ -17,8 +17,7 @@
 		Entry Fee: <input type="number" name="fee" value="${lake.fee}" size="25" /> <br>
 		Allow Ice fishing? 
 		<input type="radio" name="canIceFishing" value="true">Yes
-		 <input type="radio" name="canIceFishing" value="false">No <br> 
-		 <input type="hidden" name="canIceFishing" value="null">
+		<input type="radio" name="canIceFishing" value="false" checked="checked">No 
 		 
 		 Fish Species:<input type="text"
 			name="fishSpecies" size="50" value="${lake.fishSpecies}" /><br> Notes about this Lake:<input

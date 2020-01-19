@@ -26,7 +26,6 @@ public class LakeController {
 	@RequestMapping(path = "find.do", method = RequestMethod.GET)
 	public ModelAndView findById(Integer id) {
 		ModelAndView mv = new ModelAndView();
-		System.out.println("hello im the id " + id);
 		Lake lake = dao.find(id);
 
 		mv.addObject("lake", lake);
@@ -42,7 +41,7 @@ public class LakeController {
 		List<Lake> lakes = dao.search(keyword);
 
 		if (lakes == null || lakes.size() == 0) {
-			mv.setViewName("error");
+			mv.setViewName("notFound");
 			return mv;
 		} else {
 			mv.addObject("lakes", lakes);
@@ -59,7 +58,7 @@ public class LakeController {
 		List<Lake> lakes = dao.findAll();
 
 		if (lakes == null || lakes.size() == 0) {
-			mv.setViewName("error");
+			mv.setViewName("notFound");
 			return mv;
 		} else {
 			mv.addObject("lakes", lakes);
@@ -94,7 +93,6 @@ public class LakeController {
 
 	@RequestMapping(path = "updated.do", method = RequestMethod.POST)
 	public ModelAndView update(Lake lake) {
-		System.out.println("hello hello hello im in the update");
 		System.out.println(lake);
 		ModelAndView mv = new ModelAndView();
 		Lake newLake = dao.update(lake);
@@ -106,13 +104,14 @@ public class LakeController {
 	@RequestMapping(path = "delete.do", method = RequestMethod.POST)
 	public ModelAndView delete(Integer id) {
 		ModelAndView mv = new ModelAndView();
-		Boolean status = dao.delete(id);
+		boolean status = dao.delete(id);
 		if (status == true) {
+			mv.addObject("delete", status);
 			mv.setViewName("home");
+
 			return mv;
 		} else {
-			mv.setViewName("error");
-
+			mv.setViewName("notFound");
 			return mv;
 		}
 	}

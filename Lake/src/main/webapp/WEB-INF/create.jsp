@@ -16,12 +16,16 @@
 		Size in Acer: <input type="number" name="size" size="25" /> <br>
 		Elevation: <input type="number" name="elevation" size="25" /> <br>
 		Entry Fee: <input type="number" name="fee" size="25" /> <br>
-		Allow Ice fishing? <input type="radio" name="canIceFishing"
-			value="true">Yes <input type="radio" name="canIceFishing"
-			value="false">No <br> Fish Species:<input type="text"
+		Allow Ice fishing? 
+		<input type="radio" name="canIceFishing" value="true">Yes 
+		<input type="radio" name="canIceFishing" value="false" checked="checked">No 
+		<br> 
+			
+			
+			Fish Species:<input type="text"
 			name="fishSpecies" size="50" /><br> Notes about this Lake:<input
-			type="text" name="notes" size="500" /><br> 
-			<input type="submit" value="Create" /><br>
+			type="text" name="notes" size="500" /><br> <input type="submit"
+			value="Create" /><br>
 	</form>
 </body>
 </html>

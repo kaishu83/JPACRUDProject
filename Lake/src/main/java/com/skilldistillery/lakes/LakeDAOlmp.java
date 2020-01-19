@@ -31,7 +31,7 @@ public class LakeDAOlmp implements LakeDAO {
 	}
 
 	@Override
-	public boolean delete(int id) {
+	public Boolean delete(int id) {
 		try {
 			em.remove(em.find(Lake.class, id));
 			return true;

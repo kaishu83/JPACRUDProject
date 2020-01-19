@@ -9,7 +9,7 @@ public interface LakeDAO {
 
 	public Lake find(int id);
 
-	public boolean delete(int id);
+	public Boolean delete(int id);
 
 	public Lake update(Lake lake);
 	
