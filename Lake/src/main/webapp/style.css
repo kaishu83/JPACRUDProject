@@ -12,7 +12,9 @@ body {
 	background-image: url(img/lake.jpg);
 	background-size:cover;
 	color: black;
-text-align: center;	
+	text-align: center;	
+    display: flex;
+	flex-direction: column;
 	
 }
 
@@ -54,5 +56,7 @@ form {
 ul{
 	text-align: center;
 }
-
+.cer{
+	text-align: center;
+}
   
