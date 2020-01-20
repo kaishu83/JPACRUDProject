@@ -1,0 +1,58 @@
+h1 {
+	color: Purple;
+	text-align: center;
+}
+
+p {
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+
+body {
+	background-image: url(img/lake.jpg);
+	background-size:cover;
+	color: black;
+text-align: center;	
+	
+}
+
+a:link {
+  text-decoration: none;
+ color:red;
+ text-align: center;
+ font-size: xx-large;
+ font-weight: bolder;
+ 
+}
+
+a:visited {
+   text-decoration: none;
+ color:red;
+ text-align: center;
+  font-size: xx-large;
+   font-size: large;
+  
+ 
+  
+}
+
+a:hover {
+  text-decoration: underline;
+
+}
+
+a:active {
+  text-decoration: underline;
+
+  
+}
+
+form { 
+	  text-align: center;
+	
+}
+ul{
+	text-align: center;
+}
+
+  

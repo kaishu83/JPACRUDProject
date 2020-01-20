@@ -71,5 +71,12 @@ public class LakeDAOlmp implements LakeDAO {
 		em.persist(lake);
 		return lake;
 	}
+	@Override
+	public List<Lake> searchByFish(String str) {
+		String query = "SELECT lake from Lake lake where lake.fishSpecies LIKE :name";
+		List<Lake> lakes = em.createQuery(query, Lake.class).setParameter("name", "%" + str + "%").getResultList();
+
+		return lakes;
+	}
 
 }

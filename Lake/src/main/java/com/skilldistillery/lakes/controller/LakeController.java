@@ -51,6 +51,23 @@ public class LakeController {
 			return mv;
 		}
 	}
+		
+		@RequestMapping(path = "searchFish.do", method = RequestMethod.GET)
+		public ModelAndView findByFish(String keyword) {
+			ModelAndView mv = new ModelAndView();
+			List<Lake> lakes = dao.searchByFish(keyword);
+
+			if (lakes == null || lakes.size() == 0) {
+				mv.setViewName("notFound");
+				return mv;
+			} else {
+				mv.addObject("lakes", lakes);
+
+				mv.setViewName("showAll");
+
+				return mv;
+			}
+	}
 
 	@RequestMapping(path = "showAll.do", method = RequestMethod.GET)
 	public ModelAndView showAll() {

@@ -17,5 +17,7 @@ public interface LakeDAO {
 	
 	public Lake create(Lake lake);
 	
+	public List <Lake> searchByFish(String str);
+	
 
 }
